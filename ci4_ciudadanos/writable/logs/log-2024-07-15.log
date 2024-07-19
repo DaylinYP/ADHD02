@@ -1,0 +1,341 @@
+CRITICAL - 2024-07-15 14:16:40 --> ParseError: syntax error, unexpected token ";", expecting "]"
+[Method: GET, Route: ver_ciudadanos]
+in APPPATH\Models\CiudadanosModel.php on line 12.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\FS2024\\ci4_ciudadanos\\app\\Models\\CiudadanosModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\CiudadanosModel')
+ 3 APPPATH\Controllers\Ciudadanos.php(12): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\CiudadanosModel')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ciudadanos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ciudadanos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-15 14:16:56 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'fs24_bd_ciudadanos' in C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'fs24_bd_ciudada...', 3306, '', 0)
+#1 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\FS2024\ci4_ciudadanos\app\Controllers\Ciudadanos.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(933): App\Controllers\Ciudadanos->index()
+#8 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ciudadanos))
+#9 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\FS2024\ci4_ciudadanos\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'fs24_bd_ciudadanos' in C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\FS2024\ci4_ciudadanos\app\Controllers\Ciudadanos.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(933): App\Controllers\Ciudadanos->index()
+#7 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ciudadanos))
+#8 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\FS2024\ci4_ciudadanos\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-15 14:16:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'fs24_bd_ciudadanos'
+[Method: GET, Route: ver_ciudadanos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ciudadanos`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Ciudadanos.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ciudadanos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ciudadanos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-15 14:17:06 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'fs24_bd_ciudadanos' in C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'fs24_bd_ciudada...', 3306, '', 0)
+#1 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\FS2024\ci4_ciudadanos\app\Controllers\Ciudadanos.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(933): App\Controllers\Ciudadanos->index()
+#8 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ciudadanos))
+#9 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\FS2024\ci4_ciudadanos\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'fs24_bd_ciudadanos' in C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\FS2024\ci4_ciudadanos\app\Controllers\Ciudadanos.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(933): App\Controllers\Ciudadanos->index()
+#7 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ciudadanos))
+#8 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\FS2024\ci4_ciudadanos\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-15 14:17:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'fs24_bd_ciudadanos'
+[Method: GET, Route: ver_ciudadanos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ciudadanos`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Ciudadanos.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ciudadanos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ciudadanos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-15 14:18:33 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'fs24_bd_ciudadanos' in C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'fs24_bd_ciudada...', 3306, '', 0)
+#1 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\FS2024\ci4_ciudadanos\app\Controllers\Regiones.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(933): App\Controllers\Regiones->index()
+#8 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Regiones))
+#9 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\FS2024\ci4_ciudadanos\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'fs24_bd_ciudadanos' in C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\FS2024\ci4_ciudadanos\app\Controllers\Regiones.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(933): App\Controllers\Regiones->index()
+#7 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Regiones))
+#8 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\FS2024\ci4_ciudadanos\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-15 14:18:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'fs24_bd_ciudadanos'
+[Method: GET, Route: ver_regiones]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `regiones`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Regiones.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Regiones->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Regiones))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-15 14:19:10 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'fs24_bd_ciudadanos' in C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'fs24_bd_ciudada...', 3306, '', 0)
+#1 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\FS2024\ci4_ciudadanos\app\Controllers\Ciudadanos.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(933): App\Controllers\Ciudadanos->index()
+#8 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ciudadanos))
+#9 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\FS2024\ci4_ciudadanos\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'fs24_bd_ciudadanos' in C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\FS2024\ci4_ciudadanos\app\Controllers\Ciudadanos.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(933): App\Controllers\Ciudadanos->index()
+#7 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ciudadanos))
+#8 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\FS2024\ci4_ciudadanos\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-15 14:19:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'fs24_bd_ciudadanos'
+[Method: GET, Route: ver_ciudadanos]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ciudadanos`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Ciudadanos.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ciudadanos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ciudadanos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-15 14:20:42 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'fs24_bd_ciudadanos' in C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'fs24_bd_ciudada...', 3306, '', 0)
+#1 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\FS2024\ci4_ciudadanos\app\Controllers\Regiones.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(933): App\Controllers\Regiones->index()
+#8 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Regiones))
+#9 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\FS2024\ci4_ciudadanos\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'fs24_bd_ciudadanos' in C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\FS2024\ci4_ciudadanos\app\Controllers\Regiones.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(933): App\Controllers\Regiones->index()
+#7 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Regiones))
+#8 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\FS2024\ci4_ciudadanos\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\FS2024\ci4_ciudadanos\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-07-15 14:20:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'fs24_bd_ciudadanos'
+[Method: GET, Route: ver_regiones]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `regiones`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Regiones.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Regiones->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Regiones))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:22:00 --> ErrorException: Undefined variable $ciudadano
+[Method: GET, Route: ver_ciudadanos]
+in APPPATH\Views\ciudadanos.php on line 35.
+ 1 APPPATH\Views\ciudadanos.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ciudadano', 'C:\\xampp\\htdocs\\FS2024\\ci4_ciudadanos\\app\\Views\\ciudadanos.php', 35)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\FS2024\\ci4_ciudadanos\\app\\Views\\ciudadanos.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('ciudadanos', [], true)
+ 5 APPPATH\Controllers\Ciudadanos.php(16): view('ciudadanos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ciudadanos->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ciudadanos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:25:14 --> Error: Class "App\Models\NivelesAcademicosModel" not found
+[Method: GET, Route: ver_nivelesacademicos]
+in APPPATH\Controllers\NivelesAcademicos.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NivelesAcademicos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NivelesAcademicos))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:27:46 --> Error: Class "App\Models\NivelesAcademicosModel" not found
+[Method: GET, Route: ver_nivelesacademicos]
+in APPPATH\Controllers\NivelesAcademicos.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NivelesAcademicos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NivelesAcademicos))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:30:47 --> Error: Class "App\Models\NivelesAcademicosModel" not found
+[Method: GET, Route: ver_nivelesacademicos]
+in APPPATH\Controllers\NivelesAcademicos.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NivelesAcademicos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NivelesAcademicos))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:30:52 --> Error: Class "App\Models\NivelesAcademicosModel" not found
+[Method: GET, Route: ver_nivelesacademicos]
+in APPPATH\Controllers\NivelesAcademicos.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NivelesAcademicos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NivelesAcademicos))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:31:24 --> Error: Class "App\Models\NivelesAcademicosModel" not found
+[Method: GET, Route: ver_nivelesacademicos]
+in APPPATH\Controllers\NivelesAcademicos.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NivelesAcademicos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NivelesAcademicos))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:33:10 --> Error: Class "App\Models\NivelesAcademicosModel" not found
+[Method: GET, Route: ver_nivelesacademicos]
+in APPPATH\Controllers\NivelesAcademicos.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NivelesAcademicos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NivelesAcademicos))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:33:39 --> Error: Class "App\Models\NivelesAcademicosModel" not found
+[Method: GET, Route: ver_nivelesacademicos]
+in APPPATH\Controllers\NivelesAcademicos.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NivelesAcademicos->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NivelesAcademicos))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-15 14:34:36 --> ParseError: syntax error, unexpected token ":", expecting "," or ";"
+[Method: GET, Route: ver_nivelesacademicos]
+in APPPATH\Views\nivelesacademicos.php on line 26.
+ 1 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('nivelesacademicos', [], true)
+ 3 APPPATH\Controllers\NivelesAcademicos.php(16): view('nivelesacademicos', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NivelesAcademicos->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NivelesAcademicos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

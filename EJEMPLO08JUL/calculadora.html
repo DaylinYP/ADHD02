@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora PHP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col col-6">
+                <h1>Calculadora Básica <br>con PHP</h1>
+                <form action="calculadora.php" method="get">
+                    <div class="mb-3">
+                        <label for="txtValor1" class="form-label">Primer Valor</label>
+                        <input type="number" class="form-control" id="txtValor1" name="txtValor1"
+                            placeholder="Ingrese un número">
+                    </div>
+                    <div class="mb-3">
+                        <label for="txtValor2" class="form-label">Segundo Valor</label>
+                        <input type="number" class="form-control" id="txtValor2" name="txtValor2"
+                            placeholder="Ingrese un número">
+                    </div>
+
+                    <div class="mb-3 text-center">
+                        <input type="submit" class="btn btn-success" id="btnSuma" name="btnSuma" value="+">
+                        <input type="submit" class="btn btn-danger" id="btnResta" name="btnResta" value="-">
+                        <input type="submit" class="btn btn-primary" id="btnMulti" name="btnMulti" value="*">
+                        <input type="submit" class="btn btn-warning" id="btnDivi" name="btnDivi" value="/">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-Ycbvyk1if5Kjr4EtpZc+V0zK0WltjF99bDhAu8RHteUG+6Bz4imktB2DlXDK/kF5"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
