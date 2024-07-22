@@ -33,6 +33,7 @@
                             <th>Meses de Atraso</th>
                             <th>Plan ID</th>
                             <th>Cliente ID</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,6 +46,10 @@
                                 <td><?php echo $lineastelefonicas['meses_atraso']; ?></td>
                                 <td><?php echo $lineastelefonicas['plan_id']; ?></td>
                                 <td><?php echo $lineastelefonicas['cliente_id']; ?></td>
+                                <td>
+                                    <a href="actualizar_lineastelefonicas" class="btn btn-info">Actualizar</a>
+                                    <a href="eliminar_lineastelefonicas/<?php echo $lineastelefonicas['no_telefono'] ?>" class="btn btn-danger">Eliminar</a>
+                                </td>
                             </tr>
                         <?php
                         endforeach;

@@ -56,7 +56,7 @@
                 </td>
                 <td>
                   <a href="actualizar_clientes" class="btn btn-info" >Actualizar</a>
-                  <a href="eliminar_clientes/<?php echo $clientes['cliente_id']?>" class="btn btn-danger">Eliminar</a>
+                  <a href="eliminar_clientes"<?php echo $clientes['cliente_id']?>" class="btn btn-danger">Eliminar</a>
                 </td>
               </tr>
             <?php

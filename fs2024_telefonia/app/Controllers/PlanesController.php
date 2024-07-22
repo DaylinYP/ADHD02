@@ -23,26 +23,22 @@ class PlanesController extends BaseController
     }
     public function agregarPlan()
     {
-        $id = $this->request->getVar('txtId');
-        //echo "<br>Id = ". $id;
-        $nombre = $this->request->getVar('txtNombre');
-        //echo "<br>nombre = ". $nombre;
-        $pago = $this->request->getVar('txtPagoMensual');
-        //echo "<br>Pago =". $pago;
-        $minutos = $this->request->getVar('txtCantidadMinutos');
-        //echo "<br>Minutos = ". $minutos;
-        $mensajes = $this->request->getvar('txtCantidadMensajes');
-        //echo "<br>Mensajes = ". $mensajes;
-        $planes = new PlanesModel();
         $datos = [
-            'plan_id' => $id,
-            'nombre' => $nombre,
-            'pago_mensual' => $pago,
-            'cantidad_minutos' => $minutos,
-            'cantidad_mensajes' => $mensajes
+            'plan_id' => $this->request->getVar('txtId'),
+            'nombre' => $this->request->getVar('txtNombre'),
+            'pago_mensual' => $this->request->getVar('txtPagoMensual'),
+            'cantidad_minutos' => $this->request->getVar('txtCantidadMinutos'),
+            'cantidad_mensajes' => $this->request->getVar('txtCantidadMensajes')
         ];
+        $planes = new PlanesModel();
         $planes->insert($datos);
         echo "Datos guardados";
+        return redirect()->route('planes');
+    }
+    public function eliminarPlanes($plan_id = null)
+    {
+        $planes = new PlanesModel();
+        $planes->delete(['plan_id'=>$plan_id]);
         return redirect()->route('planes');
     }
 }

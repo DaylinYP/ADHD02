@@ -24,8 +24,10 @@ $routes->get('lineastelefonicas', 'LineasTelefonicasController::index');
 $routes->post('agregar_lineastelefonicas', 'LineasTelefonicasController::agregarLineasTelefonicas');
 $routes->get('nuevas_lineastelefonicas', 'LineasTelefonicasController::nuevaslineastelefonicas');
 
-$routes->get('eliminar_plan/(:num)', 'PlanesController::eliminarPlan/$1');
 
 $routes->get('eliminar_clientes/(:num)', 'ClientesController::eliminarClientes/$1');
+$routes->get('eliminar_lineastelefonicas/(:num)', 'LineasTelefonicasController::eliminarLineasTelefonicas/$1');
+$routes->get('eliminar_planes/(:num)', 'PlanesController::eliminarPlanes/$1');
+
                 //  ruta                 controlador    metodo   parametro
 

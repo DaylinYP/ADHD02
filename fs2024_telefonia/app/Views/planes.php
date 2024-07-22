@@ -33,6 +33,7 @@
                             <th>Pago Mensual</th>
                             <th>Cantidad Minutos</th>
                             <th>Cantidad Mensajes</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,6 +46,10 @@
                                 <td><?php echo $planes['pago_mensual']; ?></td>
                                 <td><?php echo $planes['cantidad_minutos']; ?></td>
                                 <td><?php echo $planes['cantidad_mensajes']; ?></td>
+                                <td>
+                                    <a href="actualizar_planes" class="btn btn-info">Actualizar</a>
+                                    <a href="eliminar_planes/ <?php echo $planes['plan_id'] ?>" class="btn btn-danger">Eliminar</a>
+                                </td>
                             </tr>
                         <?php
                         endforeach;

@@ -19,9 +19,9 @@
 <body style="background-color: #6e6e6e;">
     <div class="container">
         <nav class="nav nav-pills flex-column flex-sm-row text-light table-dark">
-            <a class="flex-sm-fill text-sm-center nav-link" href="<?php echo base_url('nuevo_cliente'); ?>">Clientes Nuevos</a>
-            <a class="flex-sm-fill text-sm-center nav-link" href="<?php echo base_url('nuevas_lineastelefonicas'); ?>">Líneas Telefónicas Nuevas</a>
-            <a class="flex-sm-fill text-sm-center nav-link" href="<?php echo base_url('nuevo_plan'); ?>">Planes Nuevos</a>
+            <a class="flex-sm-fill text-sm-center nav-link" style="color: #ffff;" href="<?php echo base_url('nuevo_cliente'); ?>">Clientes Nuevos</a>
+            <a class="flex-sm-fill text-sm-center nav-link" style="color: #ffff;" href="<?php echo base_url('nuevas_lineastelefonicas'); ?>">Líneas Telefónicas Nuevas</a>
+            <a class="flex-sm-fill text-sm-center nav-link" style="color: #ffff;" href="<?php echo base_url('nuevo_plan'); ?>">Planes Nuevos</a>
         </nav>
         <h1>Clientes</h1>
         <form action="agregar_cliente" method="post"> <!--Metodo post para que se vayan los datos ocultos-->

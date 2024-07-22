@@ -26,19 +26,19 @@
     <h1>Nuevo Plan</h1>
     <form action="agregar_plan" method="post">
       <div class="mb-8">
-        <label for="txtId" class="form-label">Código:</label>
+        <label for="txtId" class="form-label">Código</label>
         <input type="text" id="txtId" name="txtId" class="form-control">
       </div>
       <div class="mb-8">
-        <label for="txtNombre" class="form-label">Nombre:</label>
+        <label for="txtNombre" class="form-label">Nombre</label>
         <input type="text" id="txtNombre" name="txtNombre" class="form-control">
       </div>
       <div class="mb-8">
-        <label for="txtPagoMensual" class="form-label">Pago Mensual:</label>
+        <label for="txtPagoMensual" class="form-label">Pago Mensual</label>
         <input type="number" id="txtPagoMensual" name="txtPagoMensual" class="form-control">
       </div>
       <div class="mb-8">
-        <label for="txtCantidadMinutos" class="form-label">Cantidad de minutos:</label>
+        <label for="txtCantidadMinutos" class="form-label">Cantidad de minutos</label>
         <input type="text" id="txtCantidadMinutos" name="txtCantidadMinutos" class="form-control">
       </div>
       <div class="mb-8">
